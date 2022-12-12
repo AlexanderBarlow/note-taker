@@ -27,7 +27,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'))
 });
 
-function createNote(body, createdNotes) {
+const createNote = (body, createdNotes) => {
     const note = body;
     if (!Array.isArray(createdNotes))
         createdNotes = [];
